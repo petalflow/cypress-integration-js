@@ -1,0 +1,24 @@
+{
+  "name": "@petalflow/cypress-integration",
+  "version": "1.0.0",
+  "description": "Biblioteca de integração entre Cypress e PetalFlow para automação de testes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cypress",
+    "petalflow",
+    "testing",
+    "automation"
+  ],
+  "author": "Clayton",
+  "license": "MIT",
+  "peerDependencies": {
+    "cypress": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/petalflow/cypress-integration"
+  }
+}
