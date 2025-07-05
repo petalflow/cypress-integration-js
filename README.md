@@ -1,4 +1,4 @@
-# @petalflow/cypress-integration
+## petalflow/cypress-integration
 
 Biblioteca de integração entre Cypress e PetalFlow para automação de testes.
 

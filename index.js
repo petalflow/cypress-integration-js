@@ -5,6 +5,7 @@ let config = {
 /**
  * @param {Object} userConfig - Configuração com `token`
  */
+
 function setupCommands(userConfig) {
   if (!userConfig?.token) {
     throw new Error('Token é obrigatório na configuração da integração com o PetalFlow.');
