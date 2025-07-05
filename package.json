@@ -17,8 +17,11 @@
   "peerDependencies": {
     "cypress": ">=10.0.0"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/petalflow/cypress-integration"
+    "url": "git+https://github.com/petalflow/cypress-integration-js.git"
   }
 }

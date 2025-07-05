@@ -13,12 +13,12 @@ npm install @petalflow/cypress-integration
 No arquivo `cypress/support/e2e.js` ou `cypress/support/commands.js`, adicione:
 
 ```javascript
-const petalflowCypress = require('@petalflow/cypress-integration');
 
+const petalflowCypress = require('@petalflow/cypress-integration');
+const petalIt = petalflowCypress.petalIt;
 petalflowCypress.setupCommands({
-  apiUrl: 'http://seu-servidor-petalflow',
-  token: 'seu-token-de-autenticacao'
-});
+  token: 'seu-token-aqui',
+})
 ```
 
 ## Uso
@@ -26,24 +26,18 @@ petalflowCypress.setupCommands({
 Nos seus testes Cypress, você pode usar o comando `cy.reportTestResult()` para reportar os resultados:
 
 ```javascript
-it('Validar as credenciais de acesso corretas', () => {
-  const caseId = 13;
-  
-  LoginPage.visit();
-  LoginPage.fillLogin(login);
-  LoginPage.fillPassword(password);
-  LoginPage.clickProceed();
-
-  cy.url().should('include', '/atendimento').then(() => {
-    cy.reportTestResult(caseId, 'PASS');
-  });
-});
+describe("Teste login", () => {
+  petalIt('CT_000', '/login', () => {
+    // .... 
+    // you test code here
+    //....
+  })
+})
 ```
 
 ## Parâmetros
 
 ### setupCommands(config)
-- `config.apiUrl`: URL base da API do PetalFlow
 - `config.token`: Token de autenticação
 
 ### cy.reportTestResult(caseId, result)
